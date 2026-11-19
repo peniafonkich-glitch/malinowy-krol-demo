@@ -173,7 +173,7 @@ footer p{max-width:86ch;margin:0 auto;font-size:13px}
     <p class="intro">Uzupełnij dekret i przyłóż pieczęć. Otworzy się gotowa wiadomość do Malinowego Króla.</p>
     <form id="f" onsubmit="return false">
       <label>Okazja<select name="occ"><option>urodziny</option><option>tort dla kobiety</option><option>tort dla dziecka</option><option>inna okazja</option></select></label>
-      <label>Data<input type="date" name="date"></label>
+      <label>Data<input type="text" name="date" inputmode="numeric" placeholder="np. 12.12.2026"></label>
       <label>Liczba osób<input type="number" name="ppl" min="1" placeholder="np. 20"></label>
       <label>Telefon<input type="tel" name="tel" autocomplete="tel" placeholder="do kontaktu"></label>
       <label class="wide">Pomysł<textarea name="idea" placeholder="kolory, motyw, kwiaty, smak"></textarea></label>
@@ -210,7 +210,7 @@ var f=document.getElementById('f'),seal=document.getElementById('seal');
 function fmt(v){if(!v)return'';var p=v.split('-');return p[2]+'.'+p[1]+'.'+p[0]}
 seal.addEventListener('click',function(){
   var L=['Dzień dobry!','Chciał(a)bym zamówić tort: '+f.occ.value+'.'];
-  if(f.date.value)L.push('Data: '+fmt(f.date.value)+'.');
+  if(f.date.value.trim())L.push('Data: '+f.date.value.trim()+'.');
   if(f.ppl.value)L.push('Liczba osób: '+f.ppl.value+'.');
   if(f.idea.value.trim())L.push('Pomysł: '+f.idea.value.trim());
   if(f.tel.value.trim())L.push('Telefon: '+f.tel.value.trim());
