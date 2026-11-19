@@ -51,7 +51,9 @@ h1{font-size:clamp(44px,8vw,112px);color:var(--rasp);margin-top:8px;font-weight:
 .model{position:relative;width:min(380px,76vw);aspect-ratio:1;margin:-6px auto -20px}
 #cv{position:absolute;inset:0;width:100%;height:100%;display:block}
 .model::after{content:"";position:absolute;left:22%;right:22%;bottom:16%;height:8%;border-radius:50%;background:radial-gradient(ellipse,rgba(142,24,70,.25),transparent 70%)}
-.cap{font-size:12px;opacity:.65}
+.cap{display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;z-index:2}
+.cap span{padding:7px 14px;background:rgba(42,16,32,.88);color:#fff;font-weight:600;font-size:13px;letter-spacing:.04em}
+.cap small{font-size:12px;opacity:.65}
 .lede{max-width:46ch;margin:14px auto 0;font-size:clamp(18px,1.6vw,21px)}
 .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
 .btn{display:inline-flex;align-items:center;min-height:54px;padding:0 26px;border:1.5px solid var(--rasp);font:600 15px var(--bd);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--rasp);background:var(--white)}
@@ -132,7 +134,7 @@ footer p{max-width:86ch;margin:0 auto;font-size:13px}
   <div class="model">
     <canvas id="cv" role="img" aria-label="Trójwymiarowy malinowy deser z lustrzaną glazurą, model wygenerowany komputerowo."></canvas>
   </div>
-  <div class="cap">Deser: model 3D wygenerowany komputerowo.</div>
+  <div class="cap"><span>Tu może być zdjęcie Pani tortu</span><small>teraz: model 3D wygenerowany komputerowo</small></div>
   <p class="lede">Torty artystyczne na urodziny, z kwiatami, dla kobiety, dla dzieci. Każdy robiony pod konkretną okazję.</p>
   <div class="ctas"><a class="btn f" href="#dekret">Zamów tort</a><a class="btn" href="#kolekcja">Zobacz kolekcję</a></div>
   <span class="ornament" aria-hidden="true"></span>
